@@ -1,4 +1,5 @@
 <?php
+    require 'Veicolo.php';
     class Automobile extends Veicolo{
         private $modello;
 
