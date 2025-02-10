@@ -1,33 +1,42 @@
+
 <?php
-    public class Alunno{
+     class Alunno{
         protected $nome;
         protected $cognome;
         protected $eta;
 
+        public function __construct($nome, $cognome, $eta){
+            $this->nome = $nome;
+            $this->cognome = $cognome;
+            $this->eta = $eta;
+        }
+
         public function getNome(){
-            return $this->$nome;
+            return $this->nome;
         }
 
         public function getCognome(){
-            return $this->$cognome
+            return $this->cognome;
         }
 
         public function getEta(){
-            return $this->$eta;
+            return $this->eta;
         }
 
-        public setNome($nome){
-            $this->$nome=$nome
+        public function setNome($nome){
+            $this->nome=$nome;
         }
 
-        public setCognome($cognome){
-            $this->$cognome=$cognome
+        public function setCognome($cognome){
+            $this->cognome=$cognome;
         }
 
-        public setEta($eta){
-            $this->$eta=$eta
+        public function setEta($eta){
+            $this->eta=$eta;
         }
 
-        
+        public function toString(){
+            echo "<p>NOME: " . $this->nome . " COGNOME: " . $this->cognome . " ETA: " . $this->eta . "</p>";
+        }
     }
 ?>
